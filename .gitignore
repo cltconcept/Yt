@@ -1,0 +1,197 @@
+# ============================================
+# YouTube Pipeline - .gitignore
+# ============================================
+
+# ============ ENVIRONNEMENT ============
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# ============ DONNÉES SENSIBLES ============
+# Ne JAMAIS commiter ces fichiers !
+**/youtube_credentials.json
+**/tiktok_credentials.json
+**/instagram_credentials.json
+**/api_keys.json
+**/credentials.json
+**/secrets.json
+**/oauth*.json
+
+# ============ DONNÉES UTILISATEUR ============
+# Dossiers de données générées
+web-app/data/output/*
+!web-app/data/output/.gitkeep
+web-app/data/uploads/*
+!web-app/data/uploads/.gitkeep
+web-app/backend/output/
+web-app/backend/uploads/
+
+# Fichiers status
+**/tiktok_status.json
+**/instagram_status.json
+**/youtube_status.json
+
+# ============ PYTHON ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ============ NODE.JS ============
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ============ NEXT.JS ============
+.next/
+out/
+.nuxt/
+.cache/
+
+# ============ BUILD ============
+dist/
+build/
+*.tsbuildinfo
+
+# ============ IDE ============
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-workspace
+
+# ============ OS ============
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ============ LOGS ============
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============ VIDÉOS & MÉDIAS ============
+# Ne pas tracker les vidéos générées
+*.mp4
+*.mp3
+*.wav
+*.webm
+*.avi
+*.mov
+*.mkv
+*.flv
+*.wmv
+*.m4v
+*.m4a
+*.aac
+*.ogg
+*.flac
+
+# Images générées (sauf assets)
+web-app/data/**/*.png
+web-app/data/**/*.jpg
+web-app/data/**/*.jpeg
+web-app/data/**/*.gif
+web-app/data/**/*.webp
+web-app/backend/output/**/*.png
+web-app/backend/output/**/*.jpg
+
+# ============ DOCKER ============
+docker-compose.override.yml
+.docker/
+
+# ============ BASES DE DONNÉES ============
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# ============ CELERY ============
+celerybeat-schedule
+celerybeat.pid
+*.pid
+
+# ============ MINIO ============
+minio-data/
+
+# ============ FICHIERS TEMPORAIRES ============
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*~
+
+# ============ TESTS ============
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.hypothesis/
+
+# ============ DOCUMENTATION ============
+# Ignorer la documentation (générée par Cursor)
+documentation/
+docs/_build/
+site/
+
+# ============ FFMPEG (portable) ============
+# FFmpeg est trop volumineux pour Git (~150MB)
+# L'utilisateur doit le télécharger séparément
+ffmpeg/
+ffmpeg/*.exe
+ffmpeg/*.log
+
+# ============ DIVERS ============
+*.plan.md
+.turbo
